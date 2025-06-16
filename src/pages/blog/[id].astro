@@ -28,7 +28,7 @@ const { Content,  remarkPluginFrontmatter} = await render(entry);
     </p>
     <div class="flex gap-4 mb-6">
       <Image
-        src={identity.logo}
+        src={identity.profile}
         alt={identity.name}
         width={40}
         height={40}
@@ -43,13 +43,6 @@ const { Content,  remarkPluginFrontmatter} = await render(entry);
         </p>
       </div>
     </div>
-    <Image
-      src={entry.data.image.url}
-      alt={entry.data.image.alt}
-      width={800}
-      height={300}
-      class="apsect-video w-full rounded-xl mb-10"
-    />
     <article
       class="prose prose-invert prose-a:text-blue-300 prose-a:underline-offset-4 prose-headings:mb-2 prose-p:text-[#b3b3b3]"
     >

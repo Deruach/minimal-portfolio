@@ -14,4 +14,11 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkReadingTime],
   },
+  server: {
+    host: "0.0.0.0",
+    port: 4321,
+  },
+  devToolbar: {
+    enabled: false,
+  },
 });

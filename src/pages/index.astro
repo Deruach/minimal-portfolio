@@ -21,7 +21,7 @@ posts.splice(2)
     <p class="opacity-60 mb-10">{homePageContent.role}</p>
     <div class="flex flex-col min-[520px]:flex-row gap-6 mb-8">
       <Image
-        src={identity.logo}
+        src={identity.profile}
         alt={identity.name}
         width={100}
         height={100}
@@ -43,16 +43,21 @@ posts.splice(2)
     <p class="max-w-md mb-8">
       {homePageContent.description}
     </p>
-    <div class="flex items-center gap-4 group w-fit">
+    <div class="flex items-center gap-6 group w-fit">
       {
         homePageContent.links.map((link) => (
-          <Link text={link.title} href={link.url} external={link.external} />
+          <Link
+            text={link.title}
+            href={link.url}
+            external={link.external}
+            download={link.download}
+          />
         ))
       }
     </div>
   </section>
   <section class="mt-20 max-w-2xl mx-auto px-6">
-    <h2 class="mb-8">Latest Posts</h2>
+    <h2 class="mb-8">Recente Posts</h2>
     <div class="grid grid-cols-1 gap-10 sm:gap-6 mb-10">
       {
         posts.map((post) => (
@@ -82,7 +87,7 @@ posts.splice(2)
       <a
         href="/blog"
         class="underline underline-offset-4 opacity-60 hover:opacity-100 transition-opacity"
-        >View all</a
+        >Zie meer</a
       >
     </div>
   </section>

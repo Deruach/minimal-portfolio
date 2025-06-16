@@ -9,9 +9,10 @@ import type {
 } from "./types/config";
 
 export const identity: Identity = {
-  name: "Tim Witzdam",
+  name: "Lucas Kemper",
   logo: "/logo.webp",
-  email: "tim@witzdam.com",
+  profile: "/profile.webp",
+  email: "lucaskemper2000@gmail.com",
 };
 
 export const navBarLinks: NavBarLink[] = [
@@ -20,11 +21,11 @@ export const navBarLinks: NavBarLink[] = [
     url: "/",
   },
   {
-    title: "About",
+    title: "Over mij",
     url: "/about",
   },
   {
-    title: "Projects",
+    title: "Projecten",
     url: "/projects",
   },
   {
@@ -36,13 +37,19 @@ export const navBarLinks: NavBarLink[] = [
 export const socialLinks: SocialLink[] = [
   {
     title: "GitHub",
-    url: "https://github.com/TimWitzdam",
+    url: "https://github.com/Deruach",
     icon: "mdi:github",
     external: true,
   },
   {
+    title: "Linkedin",
+    url: "https://www.linkedin.com/in/lucas-ruben-kemper/",
+    icon: "mdi:linkedin",
+    external: true,
+  },
+  {
     title: "Mail",
-    url: "mailto:tim@witzdam.com",
+    url: "mailto:lucaskemper2000@gmail.com",
     icon: "mdi:email",
   },
 ];
@@ -50,23 +57,28 @@ export const socialLinks: SocialLink[] = [
 // Home (/)
 export const homePageContent: HomePageContent = {
   seo: {
-    title: "Tim Witzdam",
+    title: "Lucas Kemper",
     description:
-      "Full time student from Germany who loves building cool things using code.",
+      "Ik ben een MBO 4-student aan Technova College met een passie voor programmeren. Ik leer graag door dingen te bouwen – van simpele tools tot creatieve projecten met code.",
     image: identity.logo,
   },
   role: "Student & Software Developer",
-  description:
-    "I'm Tim Witzdam, a full time student from Germany who also loves building cool things using code.",
+  description: `
+    Ik ben een MBO 4-student aan Technova College met een passie voor programmeren. Ik leer graag door dingen te bouwen – van simpele tools tot creatieve projecten met code.`,
   socialLinks: socialLinks,
   links: [
     {
-      title: "My Projects",
+      title: "Projecten",
       url: "/projects",
     },
     {
-      title: "About Me",
+      title: "Over Mij",
       url: "/about",
+    },
+    {
+      title: "Mijn CV",
+      url: "/cv-lucas-kemper.pdf",
+      download: true,
     },
   ],
 };
@@ -74,52 +86,56 @@ export const homePageContent: HomePageContent = {
 // About (/about)
 export const aboutPageContent: AboutPageContent = {
   seo: {
-    title: "About | Tim Witzdam",
+    title: "Over mij | Lucas Kemper",
     description:
-      "Full time student from Germany who loves building cool things using code.",
+      "Ik ben een fulltime student met een passie voor het bouwen van gave projecten met code.",
     image: identity.logo,
   },
-  subtitle: "Some information about myself",
+  subtitle: "Wat informatie over mijzelf",
   about: {
     description: `
-I'm Tim Witzdam, a full time student from Germany who also loves building cool things using code.
+Ik ben Lucas, 19 jaar en vierdejaarsstudent aan het Technova College.  
 <br/><br/>
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque placeat est architecto tempora voluptatem sit suscipit aspernatur? <br/><br/>
-Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium consectetur nemo vero officia itaque.`, // Markdown is supported
+Als leergierige en serieuze student bouw ik graag praktische en creatieve oplossingen met code. Ik werk zelfstandig en in teamverband, en zet door om problemen op te lossen.  
+<br/><br/>
+Naast mijn studie werk ik aan persoonlijke projecten en blijf ik nieuwe technologieën leren. Mijn doel is een technisch sterke en creatieve professional te worden.  
+<br/><br/>
+Ik leer het liefst door te doen en blijf mezelf zo continu verbeteren.`,
+    // Markdown is supported
     image_l: {
-      url: "/demo-1.jpg",
+      url: "/code.jpg",
       alt: "Left Picture",
     },
     image_r: {
-      url: "/demo-1.jpg",
+      url: "/typing.jpg",
       alt: "Right Picture",
     },
   },
   work: {
-    description: `I've worked with a variety of technologies and tools to build cool things. Here are some of the projects I've worked on.`, // Markdown is supported
+    description: `Dit zijn de bedrijven waar ik stage heb gelopen en ervaring heb opgedaan met verschillende technieken.`, // Markdown is supported
     items: [
       {
-        title: "Software Developer",
+        title: "Software Developer Stage",
         company: {
-          name: "Freelance",
-          image: "/logo.webp",
+          name: "Novimedia",
+          image: "/novi-logo.webp",
           url: "https://github.com/TimWitzdam",
         },
-        date: "2021 - Present",
+        date: "Nov 2024 - Apr 2025",
       },
       {
-        title: "Software Developer",
+        title: "Software Developer Stage",
         company: {
-          name: "Freelance",
-          image: "/logo.webp",
+          name: "Crop",
+          image: "/crop-logo.webp",
           url: "https://github.com/TimWitzdam",
         },
-        date: "2019 - 2021",
+        date: "Feb 2024 - Jul 2024",
       },
     ],
   },
   connect: {
-    description: `I'm always interested in meeting new people and learning new things. Feel free to connect with me on any of the following platforms.`, // Markdown is supported
+    description: `Ik ben altijd geïnteresseerd in het ontmoeten van nieuwe mensen en het leren van nieuwe dingen. Voel je vrij om contact met me op te nemen via een van de onderstaande platforms.`, // Markdown is supported
     links: socialLinks,
   },
 };
@@ -127,32 +143,18 @@ Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium conse
 // Projects (/projects)
 export const projectsPageContent: ProjectPageContent = {
   seo: {
-    title: "Projects | Tim Witzdam",
-    description: "Check out what I've been working on.",
+    title: "Projecten | Lucas Kemper",
+    description: "Bekijk mijn recente werk.",
     image: identity.logo,
   },
-  subtitle: "Check out what I've been working on.",
+  subtitle: "Bekijk mijn recente werk.",
   projects: [
     {
-      title: "Project 1",
-      description: "Project 1 Description",
-      image: "/demo-2.jpg",
+      title: "Omnifood",
+      description: "project from Jonas S. Udemy course",
+      image: "/project1.jpg",
       year: "2024",
-      url: "https://github.com/TimWitzdam",
-    },
-    {
-      title: "Project 1",
-      description: "Project 1 Description",
-      image: "/demo-2.jpg",
-      year: "2024",
-      url: "https://github.com/TimWitzdam",
-    },
-    {
-      title: "Project 1",
-      description: "Project 1 Description",
-      image: "/demo-2.jpg",
-      year: "2024",
-      url: "https://github.com/TimWitzdam",
+      url: "https://github.com/Deruach/html-css-course-my",
     },
   ],
 };
@@ -160,9 +162,9 @@ export const projectsPageContent: ProjectPageContent = {
 // Blog (/blog)
 export const blogPageContent: BlogPageContent = {
   seo: {
-    title: "Blog | Tim Witzdam",
-    description: "Thoughts, stories and ideas.",
+    title: "Blog | Lucas Kemper",
+    description: "Gedachten, verhalen en ideeën.",
     image: identity.logo,
   },
-  subtitle: "Thoughts, stories and ideas.",
+  subtitle: "Gedachten, verhalen en ideeën.",
 };

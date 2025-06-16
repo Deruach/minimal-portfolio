@@ -1,11 +1,12 @@
 services:
-  minimal-portforio-template:
-    container_name: minimal-portforio-template
-    image: minimal-portforio-template
+  minimal-portfolio-template:
+    container_name: minimal-portfolio-template
     build:
-      context: ./
+      context: .
       dockerfile: Dockerfile
-      target: runtime
     ports:
       - "4321:4321"
-    restart: always
+    volumes:
+      - .:/app
+      - /app/node_modules
+    restart: unless-stopped

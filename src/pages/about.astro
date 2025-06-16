@@ -13,7 +13,7 @@ const connectDescription = marked.parse(aboutPageContent.connect.description)
 
 <Layout seo={aboutPageContent.seo}>
   <section class="mt-10 max-w-2xl mx-auto px-6">
-    <h1 class="font-bold text-3xl mb-1">About</h1>
+    <h1 class="font-bold text-3xl mb-1">Over mij</h1>
     <p class="opacity-60 mb-10">{aboutPageContent.subtitle}</p>
     <div class="mb-14">
       <Fragment set:html={pageDescription} />
@@ -36,7 +36,7 @@ const connectDescription = marked.parse(aboutPageContent.connect.description)
     </div>
   </section>
   <section class="my-20 mt-32 max-w-2xl mx-auto px-6 sm:flex sm:gap-16">
-    <h2 class="mb-8 sm:mb-0 opacity-60">Work</h2>
+    <h2 class="mb-8 sm:mb-0 opacity-60">Stages</h2>
     <div>
       <div class="mb-6">
         <Fragment set:html={workDescription} />
@@ -47,7 +47,7 @@ const connectDescription = marked.parse(aboutPageContent.connect.description)
     </div>
   </section>
   <section class="mt-32 max-w-2xl mx-auto px-6 sm:flex sm:gap-16">
-    <h2 class="mb-8 sm:mb-0 opacity-60">Connect</h2>
+    <h2 class="mb-8 sm:mb-0 opacity-60">Contact</h2>
     <div>
       <div class="mb-6">
         <Fragment set:html={connectDescription} />

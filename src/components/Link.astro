@@ -5,23 +5,27 @@ interface Props {
   href: string;
   external?: boolean;
   noAnchor?: boolean;
+  download?: boolean;
 }
 
-const { text, href, external, noAnchor } = Astro.props;
+const { text, href, external, noAnchor, download } = Astro.props;
 ---
 
 {
   !noAnchor ? (
     <a
       href={href}
-      target={external ? "_blank" : "_self"}
-      class="flex items-center gap-2 opacity-60 group-hover:opacity-30 hover:!opacity-60 transition-opacity"
+      target={download ? "_self" : external ? "_blank" : "_self"}
+      rel={external && !download ? "noopener noreferrer" : undefined}
+      download={download ? href.split("/").pop() : undefined}
+      class="flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity duration-300"
     >
       <div class="rotate-45">
         <Icon name="mdi:arrow-up" />
       </div>
       <span>{text}</span>
     </a>
+
   ) : (
     <div class="flex items-center gap-2 opacity-60 group-hover:opacity-30 hover:!opacity-60 transition-opacity">
       <div class="rotate-45">
