@@ -3,7 +3,6 @@ title: "Eerste blog post"
 pubDate: 2025-06-17 #Y-M-D
 description: "Eerste post"
 author: "Lucas"
-image: { url: "/logo.webp", alt: "Test" }
 ---
 
 Welkom bij mijn allereerste blogpost! 🎉
