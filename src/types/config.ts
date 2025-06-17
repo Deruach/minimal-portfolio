@@ -15,6 +15,7 @@ export type Identity = {
   name: string;
   logo: string;
   email: string;
+  profile: string;
 };
 
 export type SEOInfo = {
@@ -32,6 +33,7 @@ export type HomePageContent = {
     title: string;
     url: string;
     external?: boolean;
+    download?: boolean;
   }[];
 };
 
